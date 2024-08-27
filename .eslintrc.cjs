@@ -10,7 +10,12 @@ const config = {
       version: 'detect',
     },
   },
-  extends: ['plugin:@typescript-eslint/recommended-type-checked', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+  ],
   globals: {
     React: true,
     JSX: true,
@@ -30,6 +35,15 @@ const config = {
     'react/prop-types': 'off',
     'react/no-unknown-property': 'warn',
   },
+  overrides: [
+    {
+      files: ['**/*.cjs'],
+      env: {
+        node: true,
+        browser: true,
+      },
+    },
+  ],
 };
 
 module.exports = config;

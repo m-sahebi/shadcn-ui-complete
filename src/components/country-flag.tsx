@@ -1,5 +1,4 @@
 import { type ReactElement } from 'react';
-import { invariant, nonNullable } from '../../../common/src/utils/utils';
 
 const COUNTRY_FLAG_SIZES = [
   '16x12',
@@ -46,9 +45,9 @@ export function CountryFlag(props: {
   const { className, size, name } = props;
   const code = props.code.toLowerCase();
   const flagIdx = COUNTRY_FLAG_SIZES.indexOf(size);
-  invariant(flagIdx !== -1, 'Invalid country flag size');
-  const size2x = nonNullable(COUNTRY_FLAG_SIZES[getCountryFlagSize2xIdx(flagIdx)]);
-  const size3x = nonNullable(COUNTRY_FLAG_SIZES[getCountryFlagSize3xIdx(flagIdx)]);
+  if (flagIdx === -1) throw new Error('Invalid country flag size');
+  const size2x = COUNTRY_FLAG_SIZES[getCountryFlagSize2xIdx(flagIdx)];
+  const size3x = COUNTRY_FLAG_SIZES[getCountryFlagSize3xIdx(flagIdx)];
   const [w, h] = size.split('x');
 
   return (

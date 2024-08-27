@@ -27,6 +27,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["src", "*.ts", "*.js", "*.mjs", "*.cjs"],
+  "include": ["src", "*.ts", "*.js", "*.mjs", "*.cjs", ".eslintrc.cjs"],
   "exclude": ["node_modules", "dist"]
 }
