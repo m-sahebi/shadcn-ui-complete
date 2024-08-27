@@ -16,7 +16,7 @@ function svgToDataUri(svgString: string): string {
 const backgroundImage = ({ dotSize, color = '#000' }: { dotSize: number; color?: string }) =>
   `url(${svgToDataUri(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="${color}"><circle fill="${color}" id="pattern-circle" cx="10" cy="10" r="${dotSize}"></circle></svg>`)})`;
 
-export const BgDot = memo(function BgDot(
+export const BgDotPattern = memo(function BgDot(
   props: HTMLAttributes<HTMLDivElement> & {
     dotSize?: number;
     dotClassName?: string;
