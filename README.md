@@ -24,9 +24,10 @@ additional custom components, optimized for use in a pnpm monorepo with Next.js.
    }
    ```
 3. Run `pnpm install`.
-4. Import the CSS file into your Next.js app:
+4. Import the CSS file into your Next.js app root layout:
 
    ```ts
+   // app/layout.tsx
    import 'shadcn-ui-complete/styles.css';
    ```
 
