@@ -98,6 +98,12 @@ importers:
       '@tabler/icons-react':
         specifier: ^3.13.0
         version: 3.13.0(react@18.3.1)
+      '@types/react':
+        specifier: <=18 || >=17
+        version: 18.3.4
+      '@types/react-dom':
+        specifier: <=18 || >=17
+        version: 18.3.0
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -120,13 +126,13 @@ importers:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
-        specifier: ^18.3.1
+        specifier: <=18 || >=17
         version: 18.3.1
       react-day-picker:
         specifier: ^8.10.1
         version: 8.10.1(date-fns@3.6.0)(react@18.3.1)
       react-dom:
-        specifier: ^18.3.1
+        specifier: <=18 || >=17
         version: 18.3.1(react@18.3.1)
       react-hook-form:
         specifier: ^7.53.0
@@ -159,12 +165,6 @@ importers:
       '@types/node':
         specifier: ^20.16.1
         version: 20.16.1
-      '@types/react':
-        specifier: ^18.3.4
-        version: 18.3.4
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.16.0
         version: 7.16.0(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
@@ -1729,6 +1729,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
